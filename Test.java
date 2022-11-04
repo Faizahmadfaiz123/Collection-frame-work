@@ -1,50 +1,34 @@
 package pack;
 
-import java.util.ArrayList;
-import java.util.ListIterator;
+import java.util.Stack;
 
 public class Test {
 
 	public static void main(String[] args) {
 		
-		ArrayList list = new ArrayList();
-		list.add("FaizAhamd");
-		list.add("Ahmad");
-		list.add(5960);
+//		Stack Classes.
 		
-//		Normal ListIterator.
+		Stack<String> slist = new Stack<String>();
+		slist.push("faiz");
+		slist.push("ahmad");
+		slist.push("jan");
+		slist.push("khalid");
 		
-		ListIterator data = list.listIterator();
-		while(data.hasNext()){
-			Object obj = (Object)data.next();
-			System.out.println(obj);
-			
-		}
-		System.out.println(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,");
-		while(data.hasPrevious()){
-			Object ob = (Object)data.previous();
-			System.out.println(ob);
-			
-		}
+		System.out.println(slist);
+		System.out.println(slist.search("faiz"));
+		System.out.println(slist.search("ahmad"));
+		System.out.println(slist.search("khalid"));
+		System.out.println(slist.search("jan"));
 		
-//		Genric ListIterator.
+		System.out.println(slist.peek());
 		
-		ArrayList<student> listdata = new ArrayList<student>();
-		listdata.add(new student(1, "Faiz Ahmad Faiz"));
-		listdata.add(new student(2, "walid"));
+		System.out.println(slist.pop());
 		
-		ListIterator<student> listIter = listdata.listIterator();
-		while(listIter.hasNext()){
-			student s = listIter.next();
-			System.out.println(s.sid + " : " + s.sName);
-		}
+		slist.pop();
+		System.out.println(slist);
 		
-		System.out.println(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,");
 		
-		while(listIter.hasPrevious()){
-			student st = listIter.previous();
-			System.out.println(st.sid + " , " + st.sName);
-		}
+		System.out.println(slist.isEmpty());
 		
 		
 	}
