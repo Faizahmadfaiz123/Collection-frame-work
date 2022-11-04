@@ -1,11 +1,11 @@
 package pack;
 
-public class emp {
-
-	int eid;
+public class emp  {
+	int eId;
 	String eName;
-	emp(int eid, String eName){
-		this.eid = eid;
+	
+	 emp(int eId, String eName){
+		this.eId = eId;
 		this.eName = eName;
 	}
 }
