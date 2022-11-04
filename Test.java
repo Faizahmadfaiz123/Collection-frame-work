@@ -1,36 +1,73 @@
 package pack;
 
-import java.util.Stack;
+import java.util.Iterator;
+import java.util.Vector;
 
 public class Test {
 
 	public static void main(String[] args) {
 		
-//		Stack Classes.
+//		vector class has 4 constructer.
+//		default constructer.
+		Vector list = new Vector();
+		list.add("faiz");
+		list.add(50000);
+		list.add("Ahmad");
+		list.add(50000);
 		
-		Stack<String> slist = new Stack<String>();
-		slist.push("faiz");
-		slist.push("ahmad");
-		slist.push("jan");
-		slist.push("khalid");
+		System.out.println(list);
 		
-		System.out.println(slist);
-		System.out.println(slist.search("faiz"));
-		System.out.println(slist.search("ahmad"));
-		System.out.println(slist.search("khalid"));
-		System.out.println(slist.search("jan"));
+//		for each loop.
+		for(Object obj: list){
+			Object o = (Object)obj;
+			System.out.println(o);
+		}
 		
-		System.out.println(slist.peek());
+
+//		Iterator curser.
+//		user defined capacity constructer.
 		
-		System.out.println(slist.pop());
+		Vector list01 = new Vector(5);
+		list01.add("faiz");
+		list01.add(50000);
+		list01.add("Ahmad");
+		list01.add(50000);
+		list01.add("AhmadKhan");
+		list01.add(50658);
+		list01.add("AhmadJan");
+		list01.add(5590);
 		
-		slist.pop();
-		System.out.println(slist);
+		
+		Iterator data = list01.iterator();
+		while(data.hasNext()){
+			Object obj = (Object)data.next();
+			System.out.println(obj);
+		}
+		System.out.println(list01.capacity());
 		
 		
-		System.out.println(slist.isEmpty());
 		
+//		3 constrcter in the vectoer classes.
+		
+		System.out.println("/////////////////////////////////////");
+		
+		Vector list02 = new Vector(5, 8);
+		list02.add("faiz");
+		list02.add(50000);
+		list02.add("Ahmad");
+		list02.add(50000);
+		list02.add("AhmadKhan");
+		list02.add(50658);
+		list02.add("AhmadJan");
+		list02.add(5590);
+	
+		
+		Iterator data01 = list02.iterator();
+		while(data01.hasNext()){
+			Object ob = (Object)data01.next();
+			System.out.println(ob);
+		}
+		System.out.println(list02.capacity());
 		
 	}
-
 }
